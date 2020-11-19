@@ -1,4 +1,4 @@
 @import "https://fonts.googleapis.com/css?family=Nanum+Gothic";
-article {
+article, header {
 font-family: Nanum Gothic;
 }
