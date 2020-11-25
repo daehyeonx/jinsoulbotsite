@@ -5,19 +5,25 @@
 <meta charset ="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type ="text/javascript">
-var teaPhrase = "Tea go sleep";
-
-
 $(document).ready(function() {
 
 	$('#ok').click(function (event){
-		teaSleep();
+		var x = $('#person').val();
+		if(x == 'tea'){
+			teaSleep();
+		}
+		else if(x == 'jen'){
+			jenSleep();
+		}
 	});
 	$('#no').click(function (event){
 		kermitJudge();
 	});
 });	
-
+function jenSleep() {
+	$('#kermit').attr("src","eevee_pat.png");
+	$('h1').html("Nice jen go sleep");
+}
 
 function teaSleep() {
 	$('#kermit').attr("src","eevee_sleep.png");
@@ -27,12 +33,32 @@ function kermitJudge() {
 	$('#kermit').attr("src", "kermitjudge.png");
 	$('h1').html("kermitjudge");
 }
+function changePage(){
+	var x = $('#person').val();
+	if(x == 'tea'){
+		$('#kermit').attr("src", "");
+		$('h1').html("Tea go sleep");
+	}
+	else if(x == 'jen'){
+		$('#kermit').attr("src", "");
+		$('h1').html("Jen go sleep");
+	}
+	
+}
 
 
 </script>
 </head>
 <body>
+	
 	<header>
+		<form >
+			<label for="person">Choose person</label>
+			<select name="person" id="person" onchange="changePage()">
+				<option value="tea">Tea</option>
+				<option value="jen">Jen</option>
+			</select>
+		</form>
 		<h1 id = "titleTea">Tea go sleep</h1>
 		<img src = "" id = "kermit" width = "300">	
 	</header>
