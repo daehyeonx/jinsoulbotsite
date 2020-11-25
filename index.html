@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Jinsoul Bot</title>
-<link rel="stylesheet" type ="text/css" href ="styles.css">
+<link rel="stylesheet" type ="text/css" href ="css/styles.css">
 <meta charset ="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type ="text/javascript">
+var teaPhrase = "Tea go sleep";
+
+
+$(document).ready(function() {
+
+	$('#ok').click(function (event){
+		teaSleep();
+	});
+	$('#no').click(function (event){
+		kermitJudge();
+	});
+});	
+
+
+function teaSleep() {
+	$('#kermit').attr("src","eevee_sleep.png");
+	$('h1').html("Nice tea go sleep");
+}
+function kermitJudge() {
+	$('#kermit').attr("src", "kermitjudge.png");
+	$('h1').html("kermitjudge");
+}
+
+
+</script>
 </head>
 <body>
 	<header>
-		<h1>hello</h1>
+		<h1 id = "titleTea">Tea go sleep</h1>
+		<img src = "" id = "kermit" width = "300">	
 	</header>
+	
+	<button type="button" id="ok">Ok</button>
+	<button type="button" id="no">No</button>
 <article>
 </article>
 </body>
