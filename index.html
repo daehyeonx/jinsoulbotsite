@@ -4,6 +4,7 @@
 <!-- <link rel="stylesheet" type ="text/css" href ="css/styles.css"> -->
 <link rel="stylesheet" href="css/bulma.min.css">
 <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/cyborg/bulmaswatch.min.css">
+<link rel="icon" href="jinsoulicon.jpg">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,15 +19,21 @@ $(document).ready(function(){
 });
 </script>
 <style>
+#header-logo{
+  background: "jinsoulicon.jpg" no-repeat center center;
+  background-size: cover;
+  width: 54px
+}
 </style>
 </head>
 <body>
-
 	<section class="navbar is-fixed-top back-navbar"></section>
     <section class="navbar is-fixed-top main-navbar-style">
       <div class="navbar-brand">
-        <figure class="image navbar-item">
-          <a href="#"><img class="image is-rounded" src=""></a>
+        <figure class="image navbar-item" >
+          <a id="header-logo" class ="navbar-item" href="#">
+			  <img class="image is-rounded" src="jinsoulicon.jpg">
+			</a>
 		</figure>
 		<a role="button" class="navbar-burger burger" data-target="main-navbar">
 			<span aria-hidden="true"></span>
@@ -68,9 +75,6 @@ $(document).ready(function(){
 		</div>
 	  </section>
 	  <div class='container has-text-centered'> 
-
-
-	  
 	  <div id = "top">
 		  <img src="top.png" alt="" width="658">
 	  </div>
@@ -95,6 +99,8 @@ $(document).ready(function(){
 		<img src="Dungeon1.png" alt="" width = "658">
 		<br>
 		<img src="Dungeon2.png" alt="" width = "658">
+		<br>
+		<img src="Dungeon3.png" alt="" width = "658">
 	  </div>
 	  <div id = "drop">
 		<h1 class ="title is-3">Drop</h1>
